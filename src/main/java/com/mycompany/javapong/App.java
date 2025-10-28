@@ -2,29 +2,32 @@ package com.mycompany.javapong;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-
 
 /**
  * JavaFX App
  */
+
 public class App extends Application {
 
     @Override
     public void start(Stage stage) {
-        var javaVersion = SystemInfo.javaVersion();
-        var javafxVersion = SystemInfo.javafxVersion();
-        var label = new Label("Hello, this is my Java Pong game");
-        var scene = new Scene(new StackPane(label), 800, 680);
+        var root = new Pane();
+        var scene = new Scene(root);
+
+        stage.setTitle("Java Ping Pong");
         stage.setScene(scene);
-        stage.setTitle("Pong Game");
+        stage.setMaximized(true);
         stage.show();
+
+        // Initialize GameEngine and UIManager
+        var engine = new GameEngine(root, scene);
+        var ui = new UIManager(root, engine);
+        ui.createMainMenu();
     }
 
     public static void main(String[] args) {
         launch();
     }
-
 }

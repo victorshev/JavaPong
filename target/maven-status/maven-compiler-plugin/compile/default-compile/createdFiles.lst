@@ -1,3 +1,12 @@
+com\mycompany\javapong\Ball.class
+com\mycompany\javapong\GameObject.class
 module-info.class
-com\mycompany\javapong\SystemInfo.class
+com\mycompany\javapong\UIManager.class
 com\mycompany\javapong\App.class
+com\mycompany\javapong\GameEngine$1.class
+com\mycompany\javapong\Enemy.class
+com\mycompany\javapong\SystemInfo.class
+com\mycompany\javapong\GameEngine.class
+com\mycompany\javapong\Player.class
+com\mycompany\javapong\GameEngine$2.class
+com\mycompany\javapong\Paddle.class
